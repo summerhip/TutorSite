@@ -1,6 +1,6 @@
 import React from 'react';
 import './MyCalendar.css';
-import style from 'react-big-calendar/lib/css/react-big-calendar.css';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 
@@ -27,7 +27,6 @@ export function MyCalendar(props) {
   return (
      <div className='scheduler'>
         <Calendar
-            styler={ style }
             defaultDate={new Date("2022-05-07T19:56:21.196Z")}
             defaultView="week"
             localizer={localizer}
