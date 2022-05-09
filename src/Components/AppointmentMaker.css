@@ -15,3 +15,10 @@
 #appointmentMaker .timeSlots button {
     margin: 20px 0;
 }
+
+#appointmentMaker #chooseAppointment {
+    position: absolute;
+    bottom: 5%;
+    left: 40%;
+    font-size: 30px;
+}

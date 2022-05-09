@@ -31,13 +31,26 @@ const dummyEvents = [
 export function AppointmentMaker(props) {
     const [bookingDate, setBookingDate] = useState(null);
     const [selectedTimeSlot, setSelectedTimeSlot] = useState(null);
+    const [name, setName] = useState('');
 
     const handleDateChange = useCallback(
         (e) => {
+            setName('');
             setSelectedTimeSlot(null);
             setBookingDate(e.start);
         }
     );
+
+    const makeAppointment = () => {
+        if (bookingDate && selectedTimeSlot) {
+            setName(prompt(`Selected slot: ${bookingDate.toDateString()} at ${selectedTimeSlot} Enter your name:`));
+        }
+        else {
+            window.alert('you must select a day and time.');
+        }
+    };
+
+    
 
     return (
         <div id='appointmentMaker'>
@@ -54,7 +67,7 @@ export function AppointmentMaker(props) {
             <div className='timeSlots'>
                 {bookingDate  ? (
                     <div>
-                    Selected slot: {bookingDate.toDateString()}
+                        Selected slot: {bookingDate.toDateString()}
                     </div>
                 ) : null }
 
@@ -62,16 +75,16 @@ export function AppointmentMaker(props) {
                 {times.map(time => {
                 return (
                     <div>
-                        <button
-                            key={time}
-                            onClick={e => setSelectedTimeSlot(time)}
-                        >
+                        <button key={time} onClick={e => setSelectedTimeSlot(time)}>
                             {time}
                         </button>
                     </div>
                 );
             })}
           </div>
+
+          <button id='chooseAppointment' onClick={makeAppointment}>Select this slot!</button>
+
         </div>
     );
 }
