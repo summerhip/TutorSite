@@ -65,12 +65,6 @@ export function AppointmentMaker(props) {
                 selectable={true}
             />
             <div className='timeSlots'>
-                {bookingDate  ? (
-                    <div>
-                        Selected slot: {bookingDate.toDateString()}
-                    </div>
-                ) : null }
-
                 <h2>Select a time:</h2>
                 {times.map(time => {
                 return (
@@ -83,7 +77,21 @@ export function AppointmentMaker(props) {
             })}
           </div>
 
-          <button id='chooseAppointment' onClick={makeAppointment}>Select this slot!</button>
+            <div id='apptInfo'>
+                {bookingDate  ? (
+                            <div>
+                                Selected date: {bookingDate.toDateString()}
+                            </div>
+                        ) : null }
+
+                {selectedTimeSlot  ? (
+                            <div>
+                                Selected time: {selectedTimeSlot}
+                            </div>
+                        ) : null }
+
+                    <button onClick={makeAppointment}>Select this slot!</button>
+            </div>
 
         </div>
     );

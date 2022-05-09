@@ -16,9 +16,13 @@
     margin: 20px 0;
 }
 
-#appointmentMaker #chooseAppointment {
+#appointmentMaker #apptInfo {
     position: absolute;
     bottom: 5%;
     left: 40%;
-    font-size: 30px;
+    font-size: 20px;
+}
+
+#appointmentMaker #apptInfo button {
+    font-size: larger;
 }
