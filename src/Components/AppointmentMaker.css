@@ -1,0 +1,17 @@
+#appointmentMaker .calendar {
+    position: relative;
+    top: 75px;
+    left: 10%;
+    height: 500px;
+    width: 60%;
+}
+
+#appointmentMaker .timeSlots {
+    position:absolute;
+    right: 3%;
+    top: 20%;
+}
+
+#appointmentMaker .timeSlots button {
+    margin: 20px 0;
+}

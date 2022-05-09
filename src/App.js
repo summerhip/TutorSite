@@ -1,10 +1,11 @@
 import './App.css';
-import { MyCalendar } from './MyCalendar.js';
+import { MyCalendar } from './Components/MyCalendar.js';
+import { AppointmentMaker } from './Components/AppointmentMaker.js';
 
 function App() {
   return (
     <div className="App">
-      <MyCalendar />
+      <AppointmentMaker />
     </div>
   );
 }

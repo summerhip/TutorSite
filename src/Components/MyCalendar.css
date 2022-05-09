@@ -1,0 +1,7 @@
+#myCalendar .scheduler {
+    position: relative;
+    top: 75px;
+    left: 10%;
+    height: 500px;
+    width: 75%;
+}
